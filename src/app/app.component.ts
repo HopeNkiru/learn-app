@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'nkhope';
+  ServerName = 'Apollo';
+  ServerPID = 11;
+  ServerStatus = 'offline';
+  statusFlag = false;
+
+  toggleServerStatus() {
+    this.statusFlag = !this.statusFlag;
+    if (this.statusFlag === true) {
+      this.ServerStatus = 'online';
+    }
+    return this.ServerStatus;
+  }
 }
+
+3
